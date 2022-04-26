@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <h2 class="text-center">Ordens de serviço abertas</h2>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 ordem" *ngFor="let ordem of listaOrdens">
+      <div class="row">
+        <div class="col-6">
+          <p>Cliente: {{ordem.cliente.nome}}</p>
+        </div>
+        <div class="col-5">
+          <p>Equipamento: {{ordem.equipamento}}</p>
+        </div>
+        <div class="col-1">
+          <small class="text-secondary">#{{ordem.id}}</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <p>{{ordem.descricao}}</p>
+      </div>
+
+      <div class="row d-flex justify-content-between">
+        <div class="col-4"><p>Data de entrada: {{ordem.dataEntrada | date: 'dd/MM/yyyy'}}</p></div>
+        <div class="col-3"><p>Valor: {{ordem.valor | currency:"BRL"}}</p></div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

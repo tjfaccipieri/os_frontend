@@ -4,5 +4,5 @@ export const environment = {
   nome: '',
   usuario: '',
   token: '',
-  api: 'localhost:8080'
+  api: 'http://localhost:8080'
 };

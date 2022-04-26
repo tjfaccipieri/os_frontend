@@ -6,11 +6,11 @@
         <form>
           <div class="form-group mt-3">
             <label for="usuario" class="fw-bold">Nome de usuario:</label>
-            <input type="text" class="form-control " name='usuario' id="usuario">
+            <input type="text" class="form-control " name='usuario' id="usuario" [(ngModel)]="user.usuario" >
           </div>
           <div class="form-group mt-3">
             <label for="senha" class="fw-bold">Senha:</label>
-            <input type="text" class="form-control" name='senha' id="senha">
+            <input type="text" class="form-control" name='senha' id="senha" [(ngModel)]="user.senha" >
           </div>
           <button class="w-50 btn btn-dark d-block mt-3 mx-auto" (click)="logar()">Entrar</button>
         </form>
