@@ -20,8 +20,8 @@ export class ClientesService {
     };
   }
 
-  getAll(): Observable<Clientes> {
-    return this.http.get<Clientes>(`${environment.api}/clientes`);
+  getAll(): Observable<Clientes[]> {
+    return this.http.get<Clientes[]>(`${environment.api}/clientes`);
   }
 
   getById(id: number): Observable<Clientes> {
