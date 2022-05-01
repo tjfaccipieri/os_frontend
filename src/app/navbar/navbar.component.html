@@ -1,5 +1,13 @@
-<nav class="container-fluid d-flex justify-content-between align-items-center border-bottom border-2 mb-3">
-  <h3 class="text-decoration-underline">Cadastrar</h3>
+<nav class="container-fluid d-flex justify-content-between align-items-center border-bottom border-2 mb-3 py-2">
+  <div class="dropdown">
+    <h3 class="dropdown-toggle text-decoration-underline" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Cadastrar
+    </h3>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" routerLink="/cadCliente">Cliente</a></li>
+      <li><a class="dropdown-item" routerLink="">Ordem de Serviço</a></li>
+    </ul>
+  </div>
 
   <ul class="list-unstyled d-flex gap-4 mb-0 me-5 ">
     <li>Ordens Abertas</li>
