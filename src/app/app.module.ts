@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    CadClienteComponent
   ],
   imports: [
     BrowserModule,
