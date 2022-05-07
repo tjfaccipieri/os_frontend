@@ -11,40 +11,40 @@ export class ClientesService {
   constructor(private http: HttpClient) {}
 
   token = {
-    headers: new HttpHeaders().set('Authentization', environment.token),
+    headers: new HttpHeaders().set('Authorization', environment.token),
   };
 
   refreshToken() {
     this.token = {
-      headers: new HttpHeaders().set('Authentization', environment.token),
+      headers: new HttpHeaders().set('Authorization', environment.token),
     };
   }
 
   getAll(): Observable<Clientes[]> {
-    return this.http.get<Clientes[]>(`${environment.api}/clientes`);
+    return this.http.get<Clientes[]>(`${environment.api}/clientes`, this.token);
   }
 
   getById(id: number): Observable<Clientes> {
-    return this.http.get<Clientes>(`${environment.api}/clientes/${id}`);
+    return this.http.get<Clientes>(`${environment.api}/clientes/${id}`, this.token);
   }
 
   getByNome(nome: string): Observable<Clientes> {
-    return this.http.get<Clientes>(`${environment.api}/clientes/nome/${nome}`);
+    return this.http.get<Clientes>(`${environment.api}/clientes/nome/${nome}`, this.token);
   }
 
   getByCEP(cep: string): Observable<Clientes> {
-    return this.http.get<Clientes>(`${environment.api}/clientes/cep/${cep}`);
+    return this.http.get<Clientes>(`${environment.api}/clientes/cep/${cep}`, this.token);
   }
 
-  cadCliente(cliente: Clientes): Observable<Clientes>{
-    return this.http.post<Clientes>(`${environment.api}/clientes`, cliente)
+  cadCliente(cliente: Clientes): Observable<Clientes> {
+    return this.http.post<Clientes>(`${environment.api}/clientes`, cliente, this.token);
   }
 
-  editCliente(cliente: Clientes): Observable<Clientes>{
-    return this.http.put<Clientes>(`${environment.api}/clientes`, cliente)
+  editCliente(cliente: Clientes): Observable<Clientes> {
+    return this.http.put<Clientes>(`${environment.api}/clientes`, cliente, this.token);
   }
 
-  deleteCliente(id: number){
-    return this.http.delete(`${environment.api}/clientes/${id}`)
+  deleteCliente(id: number) {
+    return this.http.delete(`${environment.api}/clientes/${id}`, this.token);
   }
 }
