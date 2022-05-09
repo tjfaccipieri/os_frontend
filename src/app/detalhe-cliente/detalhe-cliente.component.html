@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="container">
+    <h3 class="text-center">Detalhes do cliente</h3>
+
+    <div class="d-flex justify-content-between">
+      <p>Nome: {{cliente.nome}}</p>
+      <p>E-mail: {{cliente.email}}</p>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <p>Endereço: {{cliente.endRua}} - {{cliente.endNum}}</p>
+      <p>CEP: {{cliente.cep}}</p>
+    </div>
+
+
+    <h4 class="pb-0 mb-0">Contatos:</h4> <hr>
+    <div class="row d-flex justify-content-center">
+
+      <div class="d-flex w-75 justify-content-between">
+        <p>{{cliente.telefone1 | mask:'(AA)AAAAA-AAAA || (AA)AAAA-AAAA'}} <span *ngIf="cliente.whats == true"><i class="ph-whatsapp-logo-fill text-success"></i></span></p>
+        <p *ngIf="cliente.telefone2 != null">{{cliente.telefone2 | mask:'(AA)AAAAA-AAAA || (AA)AAAA-AAAA'}}</p>
+        <p *ngIf="cliente.telefone2 == null">Não possui segundo contato</p>
+      </div>
+    </div>
+    <hr>
+    <h3 class="text-center">Ordens de serviço</h3>
+    <ng-container *ngFor="let os of cliente.ordemServico; index as ordem">
+      <p>{{ordem+1}}</p>
+      <div class="row border border-1 border-dark rounded" >
+        <p>{{os.equipamento}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

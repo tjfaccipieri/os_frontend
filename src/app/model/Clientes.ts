@@ -11,5 +11,5 @@ export class Clientes {
   public telefone1: string;
   public telefone2: string;
   public whats: boolean;
-  public ordem: Ordens[]
+  public ordemServico: Ordens[]
 }

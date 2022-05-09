@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="container">
+    <h2 class="text-center">Lista de clientes</h2>
+    <div class="row table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Cad.</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col" class="text-center">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of listaClientes; index as id">
+            <th scope="row">{{id+1}}</th>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.telefone1 | mask:'(AA)AAAAA-AAAA || (AA)AAAA-AAAA'}}</td>
+            <td>
+              <div class="d-flex justify-content-around">
+                <a routerLink="">Abrir OS</a>
+                <a routerLink="">Editar</a>
+                <a [routerLink]="['/cliente', cliente.id]">Detalhes</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
+import { DetalheClienteComponent } from './detalhe-cliente/detalhe-cliente.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NgxMaskModule } from 'ngx-mask';
     LoginComponent,
     InicioComponent,
     NavbarComponent,
-    CadClienteComponent
+    CadClienteComponent,
+    ListaClientesComponent,
+    DetalheClienteComponent
   ],
   imports: [
     BrowserModule,
