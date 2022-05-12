@@ -1,6 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid" id="pdf" #pdfTable>
   <div class="container">
-    <h3 class="text-center">Detalhes do cliente</h3>
+    <h3 class="text-center">Detalhes do cliente</h3><hr>
+    <button (click)="gerarPDF()" class="btn p-2"><i class="ph-file-pdf-fill display-4"></i></button>
 
     <div class="d-flex justify-content-between">
       <p>Nome: {{cliente.nome}}</p>

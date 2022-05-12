@@ -18,6 +18,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
 import { DetalheClienteComponent } from './detalhe-cliente/detalhe-cliente.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
