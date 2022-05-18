@@ -26,9 +26,27 @@
     <hr>
     <h3 class="text-center">Ordens de serviço</h3>
     <ng-container *ngFor="let os of cliente.ordemServico; index as ordem">
-      <p>{{ordem+1}}</p>
       <div class="row border border-1 border-dark rounded" >
-        <p>{{os.equipamento}}</p>
+        <div class="col-md-12 text-center">
+          <h5 class="pb-0 mb-0">Ordem de serviço nº {{os.id}}</h5>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>Data de abertura: {{os.dataEntrada | date:'dd/MM/yyyy'}}</p>
+          <p [hidden]="os.dataEntrega == null">Data de fechamento: {{os.dataEntrega | date:'dd/MM/yyyy'}}</p>
+          <p [hidden]="os.dataEntrega != null">Data de fechamento: Ainda em trabalho</p>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>Status: {{os.entregue}}</p>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>Descrição: {{os.descricao}}</p>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>Valor: R$ {{os.valor | number:'1.2-2'}}</p>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>Produto: {{os.equipamento}}</p>
+        </div>
       </div>
     </ng-container>
   </div>

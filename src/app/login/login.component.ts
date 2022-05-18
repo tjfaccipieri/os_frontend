@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 
   user: UsuarioLogin = new UsuarioLogin()
 
+  entrarTxt: string = "Entrar"
+
   constructor(
     private auth: AuthService,
     private router: Router
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   logar(){
+    this.entrarTxt = 'Carregando'
     this.auth.logar(this.user).subscribe({
       next: (resp: UsuarioLogin) =>{
         this.user = resp;
@@ -32,10 +35,16 @@ export class LoginComponent implements OnInit {
         environment.token = this.user.token
 
         this.router.navigate(['/inicio'])
+        this.entrarTxt = "Entrar"
       },
       error: err => {
         if (err.status == 401){
           alert('Usuário/Senha inválidos')
+          this.entrarTxt = "Entrar"
+        };
+        if(err.status == 500) {
+          alert('Preencha todos os dados')
+          this.entrarTxt = "Entrar"
         }
       }
     })

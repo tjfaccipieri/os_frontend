@@ -12,7 +12,8 @@
             <label for="senha" class="fw-bold">Senha:</label>
             <input type="password" class="form-control" name='senha' id="senha" [(ngModel)]="user.senha" >
           </div>
-          <button class="w-50 btn btn-dark d-block mt-3 mx-auto" (click)="logar()">Entrar</button>
+          <button class="w-50 btn btn-dark d-block mt-3 mx-auto" [disabled]="entrarTxt != 'Entrar'" (click)="logar()">{{entrarTxt}}
+            <span class="spinner-border spinner-border-sm" [hidden]="entrarTxt == 'Entrar'" role="status"></span></button>
         </form>
       </div>
     </div>
