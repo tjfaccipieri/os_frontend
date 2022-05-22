@@ -1,8 +1,8 @@
 import { Router } from '@angular/router';
-import { ViacepService } from './../service/viacep.service';
+import { ViacepService } from './../../service/viacep.service';
 import { Component, OnInit } from '@angular/core';
-import { Clientes } from '../model/Clientes';
-import { ClientesService } from '../service/clientes.service';
+import { Clientes } from '../../model/Clientes';
+import { ClientesService } from '../../service/clientes.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({

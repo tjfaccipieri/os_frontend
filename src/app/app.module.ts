@@ -13,10 +13,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
+import { CadClienteComponent } from './cliente/cad-cliente/cad-cliente.component';
 import { NgxMaskModule } from 'ngx-mask';
-import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
-import { DetalheClienteComponent } from './detalhe-cliente/detalhe-cliente.component';
+import { ListaClientesComponent } from './cliente/lista-clientes/lista-clientes.component';
+import { DetalheClienteComponent } from './cliente/detalhe-cliente/detalhe-cliente.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 
 @NgModule({
@@ -25,9 +27,11 @@ import { DetalheClienteComponent } from './detalhe-cliente/detalhe-cliente.compo
     LoginComponent,
     InicioComponent,
     NavbarComponent,
+    NotfoundComponent,
+    ClienteComponent,
     CadClienteComponent,
     ListaClientesComponent,
-    DetalheClienteComponent
+    DetalheClienteComponent,
   ],
   imports: [
     BrowserModule,

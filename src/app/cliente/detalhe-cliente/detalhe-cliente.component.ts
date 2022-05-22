@@ -1,6 +1,6 @@
-import { Clientes } from './../model/Clientes';
-import { OrdemsService } from './../service/ordems.service';
-import { ClientesService } from './../service/clientes.service';
+import { Clientes } from './../../model/Clientes';
+import { OrdemsService } from './../../service/ordems.service';
+import { ClientesService } from './../../service/clientes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';

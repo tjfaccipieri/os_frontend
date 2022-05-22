@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
-import { ClientesService } from './../service/clientes.service';
-import { Clientes } from './../model/Clientes';
+import { ClientesService } from './../../service/clientes.service';
+import { Clientes } from './../../model/Clientes';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 
